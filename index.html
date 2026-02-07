@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<!-- MOBILE VIEWPORT FIX -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<title>For My Valentine 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="passwordLock" style="
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.85);
+  z-index:10000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+">
+  <div style="
+    background:white;
+    padding:30px 25px;
+    border-radius:20px;
+    max-width:320px;
+    width:100%;
+    box-shadow:0 20px 50px rgba(0,0,0,0.4);
+  ">
+    <h2 style="color:#ff145d;margin-bottom:10px;">Private Access 🔒</h2>
+    <p style="font-size:14px;margin-bottom:15px;">
+      Enter the password to open your Valentine surprise ❤️
+    </p>
+    <input type="password" id="pagePassword"
+      placeholder="Enter password"
+      style="width:100%;padding:12px;border-radius:12px;border:1px solid #ccc;">
+    <br><br>
+    <button onclick="unlockPage()" style="
+      background:#ff145d;
+      color:white;
+      border:none;
+      padding:12px 30px;
+      border-radius:25px;
+      font-size:15px;
+      cursor:pointer;
+    ">
+      Unlock 🤍
+    </button>
+    <p id="passError" style="color:red;font-size:12px;margin-top:10px;display:none;">
+      Wrong password ❌
+    </p>
+  </div>
+</div>
+
+<div class="floats"></div>
+<div class="angry-layer"></div>
+<div class="effects-layer"></div>
+<div class="confetti-layer"></div>
+<div class="rain-layer"></div>
+
+<audio id="romantic1" loop playsinline><source src="romantic1.mp3"></audio>
+<audio id="romantic2" loop playsinline><source src="romantic2.mp3"></audio>
+<audio id="sad1" playsinline><source src="sad1.mp3"></audio>
+<audio id="sad2" playsinline><source src="sad2.mp3"></audio>
+
+<!-- PAGE 1 -->
+<div class="container active" id="p1">
+  <div class="lang">Hello Cutie</div>
+  <h1 id="t1">Ek Filmy Shuruaat 🎬 💋</h1>
+  <p id="d1">Apna pyaara sa Naam likho…👉👈</p>
+  <input id="nameInput" placeholder="Your Lovely Name ❤️">
+  <div class="buttons">
+    <button class="primary" onclick="next(1)" id="b1">Jaldi press karo babu 💘</button>
+    <button class="no" id="no1">Nahi 🙈</button>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="container" id="p2">
+  <h2 id="title2"></h2>
+  <p>Agar meri zindagi ek film ho… toh kya tum uska last scene hi nahi, balki poori kahani banna chahogi / chahoge ? 🎬🌹</p>
+  <div class="buttons">
+    <button class="primary" onclick="next(2)">YES 💞</button>
+    <button class="no" id="no2">films mujhe pasand nhi 👉👈</button>
+  </div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="container" id="p3">
+  <h2>Mohabbat ka Waada 💕</h2>
+  <p>Kya tum mere saath har mod par chalogi /chaloge ? ❤️</p>
+  <div class="buttons">
+    <button class="primary" onclick="next(3)">Always 💖</button>
+    <button class="no" id="no3">Mujhe jaida chalna pasand nhi 🙄</button>
+  </div>
+</div>
+
+<!-- PAGE 4 -->
+<div class="container" id="p4">
+  <h2>Filmy Masti 🎥</h2>
+  <p>Kya tum meri zindagi ka woh faisla banogi / banoge, jise main har baar phir se choose karoon? 💫💍</p>
+  <div class="buttons">
+    <button class="primary" onclick="next(4)">Of Course 😍</button>
+    <button class="no" id="no4">Phone slipped 😶</button>
+  </div>
+</div>
+
+<!-- PAGE 5 -->
+<div class="container" id="p5">
+  <h2>Serious Sawaal 🥹</h2>
+  <p>Kya tum mere saath diet start karke… agle din momos khaogi / khaoge? 🥟😂</p>
+  <div class="buttons">
+    <button class="primary" onclick="next(5)">Pakka 💍</button>
+    <button class="no" id="no5">Health issue 😵</button>
+  </div>
+</div>
+
+<!-- PAGE 6 -->
+<div class="container" id="p6">
+  <h1>Last Question 😘</h1>
+  <p>Agar main gussa ho jaun, to tum kaise manaoge / manaogi? 🤔</p>
+  <div class="final-options">
+    <button>Chocolate Dekar 🍫 💝</button>
+    <button>Sorry, 1000 baar bolkr 🙏</button>
+    <button>Drama Karkr 👩🏻‍❤️‍💋‍👨🏻 🎭</button>
+    <button>Hug dekar 🫂 🤗</button>
+  </div>
+</div>
+
+<!-- PAGE 7 -->
+<div class="container" id="p7">
+  <h1>Ek Pyaari Si Chitthi 💌</h1>
+  <p id="typeText"></p>
+</div>
+
+<script src="script.js"></script>
+<script data-goatcounter="https://lovewala.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
