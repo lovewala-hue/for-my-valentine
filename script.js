@@ -1,4 +1,4 @@
-const CORRECT_PASSWORD = "love"; // 🔁 CHANGE THIS DAILY
+const CORRECT_PASSWORD = "14"; // 🔁 CHANGE THIS DAILY
 
 function unlockPage(){
   const entered = document.getElementById("pagePassword").value;
@@ -74,7 +74,7 @@ function heartBurst(container){
 }
 
 function heartExplosionPage(){
-  const hearts=["💖","💕","💘","💝","❤️","💓"];
+  const hearts=["😢","😭","🥺","💔","😞"];
   for(let i=0;i<40;i++){
     const h=document.createElement("div");
     h.className="heart-explosion";
@@ -162,7 +162,7 @@ document.querySelectorAll(".final-options button").forEach(b=>{
 setInterval(()=>{
   const f=document.createElement("div");
   f.className="float";
-  f.innerText=["💖","💕","🌹","❤️","🥰"][Math.floor(Math.random()*5)];
+  f.innerText=["💖","😍","🌹","❤️","🥰","💕","💜","🤍","😘"][Math.floor(Math.random()*9)];
   f.style.left=Math.random()*100+"vw";
   f.style.setProperty("--dur", (4+Math.random()*5)+"s");
   f.style.setProperty("--drift", (Math.random()*60-30)+"px");
